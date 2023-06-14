@@ -90,7 +90,7 @@ export default function Login() {
         Entrar
       </button>
       <button
-        className={'button is-link is-rounded'}
+        className='button is-link is-rounded'
         type="button"
         data-testid="btn-play"
         // disabled={ }
