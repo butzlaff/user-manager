@@ -10,6 +10,12 @@ const Table = () => {
     });
   };
 
+  const deleteUser = async (id) => {
+    api.delete(`/users/${id}`).then((_response) => {
+      getAllUsers();
+    });
+  };
+
   useEffect(() => {
     getAllUsers();
   }, []);
@@ -37,10 +43,17 @@ const Table = () => {
                 <input type="checkbox" checked={user.isAdmin} />
               </td>
               <td>
-                <button className="button is-warning">Editar</button>
+                <button 
+                  className="button is-warning">
+                    Editar
+                </button>
               </td>
               <td>
-                <button className="button is-danger">Excluir</button>
+                <button
+                  onClick={ () => deleteUser(user.id) } 
+                  className="button is-danger">
+                    Excluir
+                </button>
               </td>
             </tr>
           ))}
