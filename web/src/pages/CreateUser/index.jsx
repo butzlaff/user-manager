@@ -22,6 +22,9 @@ const CreateUser = () => {
       console.log(response);
       navigate('/');
     }
+    ).catch((error) => {
+      console.log(error);
+    }
     );
   };
 
