@@ -5,7 +5,7 @@ import Table from '../../components/Table';
 import { resetData } from '../../redux/slicer/slice';
 
 const Welcome = () => {
-  const name = useSelector((state) => state.user.name);
+  const name = useSelector((state) => state.user.name.toUpperCase());
 
   const dispatch = useDispatch();
 
@@ -30,14 +30,14 @@ const Welcome = () => {
 
   return (
     <div>
-      <h1>{`Welcome ${name}`}</h1>
+      <h1>{`Welcome, ${ name }`}</h1>
       {isAdmin && (
         <button className="button is-primary" onClick={toogleUsers}>
-          Exibir Users
+          Show Users
         </button>
       )}
       <button className="button is-danger" onClick={fakeLogout}>
-        Sair
+          Logout
       </button>
       {showUser && <Table />}
     </div>

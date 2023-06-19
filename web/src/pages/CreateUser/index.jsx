@@ -17,16 +17,35 @@ const CreateUser = () => {
 
   const handleCreateUser = (e) => {
     e.preventDefault();
+
+    // const formData = new FormData(e.target);
+
+    // const name = formData.get('name');
+    // const email = formData.get('email');
+    // const password = formData.get('password');
+
+
+    // console.log(formData);
+    // console.log(name, email, password);
+
     console.log('CreateUser');
     api.post('/users', user).then((response) => {
       console.log(response);
       navigate('/');
     }
+    ).catch((error) => {
+      console.log(error);
+    }
     );
   };
 
   return (
-    <form className="bg-purple-200 w-64" onSubmit={ handleCreateUser } onChange={ handleChange }>
+    <form 
+      className="bg-purple-200 w-64"
+      onSubmit={ handleCreateUser } 
+      onChange={ handleChange }
+      name='login'
+    >
       <div className="field flex">
         <label className="flex flex-col">
           Name: <input type="text" name='name' value={ user.name } />

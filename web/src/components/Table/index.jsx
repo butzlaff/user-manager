@@ -25,12 +25,12 @@ const Table = () => {
       <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Senha</th>
-            <th>Admin</th>
-            <th>Editar</th>
-            <th>Excluir</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Password</th>
+            <th>is Admin?</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -45,14 +45,14 @@ const Table = () => {
               <td>
                 <button 
                   className="button is-warning">
-                    Editar
+                    Edit
                 </button>
               </td>
               <td>
                 <button
                   onClick={ () => deleteUser(user.id) } 
                   className="button is-danger">
-                    Excluir
+                    Delete
                 </button>
               </td>
             </tr>
