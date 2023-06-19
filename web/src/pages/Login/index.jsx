@@ -44,7 +44,7 @@ export default function Login() {
   };
 
   return (
-    <form className="bg-purple-200 w-64">
+    <form className="bg-slate-400 w-64">
       <div className="field">
         <p className="control has-icons-left">
           <input
